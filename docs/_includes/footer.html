@@ -82,8 +82,18 @@
 </nav>
 <!-- end of mini footer nav -->
 <div class="d-flex justify-content-between ml-auto">
-<div class="lang-selector mr-30 position-relative">
-<button class="lang-selector__button" type="button">
+<div style="display: flex;" class="lang-selector mr-30 position-relative">
+
+
+
+<a class="lang-dropdown__item d-flex align-items-center" onclick="i18nChanger('tr')"><img src="https://cetinmert.github.io/holla/img/flag-tr.png"
+class="flag-image mr-10"></a>
+<a class="lang-dropdown__item d-flex align-items-center" onclick="i18nChanger('en')"><img src="https://cetinmert.github.io/holla/img/flag-usa.png"
+class="flag-image mr-10"></a>
+
+
+
+<button style="display: none;" class="lang-selector__button" type="button">
 <img src="https://cetinmert.github.io/holla/img/flag-langue.png" title="Dil" class="flag-image">
 <span><i18n>Dil</i18n></span>
 <i class="fa fa-angle-up"></i>
