@@ -169,3 +169,73 @@ Details</a>
 <!-- end of container -->
 </header>
 <!-- =========== End of Navigation (main menu)  ============ -->
+
+
+<style>
+/* Center the loader */
+#loader {
+position: fixed;
+left: 50%;
+top: 50%;
+z-index: 1;
+width: 120px;
+height: 120px;
+margin: -76px 0 0 -76px;
+border: 16px solid rgb(243 243 243 / 14%);
+border-radius: 50%;
+border-top: 16px solid rgb(0 0 0 / 25%);
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+z-index: 99;
+}
+
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+position: relative;
+-webkit-animation-name: animatebottom;
+-webkit-animation-duration: 1s;
+animation-name: animatebottom;
+animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+from { bottom:-100px; opacity:0 } 
+to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+from{ bottom:-100px; opacity:0 } 
+to{ bottom:0; opacity:1 }
+}
+</style>
+<div id="xloadermans" style="
+position: fixed;
+left: 0;
+right: 0;
+z-index: 999;
+top: 0;
+bottom: 0;
+background: rgb(0 0 0 / 32%);
+backdrop-filter: blur(10px);
+"><div id="loader"></div></div>
+<script>
+var myVar;
+
+function myFunction() {
+myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+document.getElementById("xloadermans").style.display = "none";
+}
+</script>
