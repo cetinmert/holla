@@ -229,13 +229,8 @@ background: rgb(0 0 0 / 32%);
 backdrop-filter: blur(10px);
 "><div id="loader"></div></div>
 <script>
-var myVar;
-
-function myFunction() {
-myVar = setTimeout(showPage, 1000);
-}
-
-function showPage() {
+setTimeout(() => {
 document.getElementById("xloadermans").style.display = "none";
-}
+document.getElementById("loader").style.display = "none";
+}, 1000);
 </script>
